@@ -9,3 +9,52 @@ else:
 #python 基础
 
 print 'I\' am ok.'
+
+list=["tom",123,3.34,]
+tinyList=[1234,'john']
+
+
+print list[0]
+print tinyList*2
+print list +tinyList
+list.insert(1,'jack')
+print list
+for ele in list:
+ print (ele)
+
+p=['asp','php']
+s=['python','java',p,'scheme']
+print s[0]
+print s[2][0]
+pp=[]
+print pp
+tu=() #不可变
+print tu
+
+
+birth = raw_input('birth: ')
+if birth < 2000:
+    print '00前'
+else:
+    print '00后'
+age=12
+if age>18:
+   print "1"
+elif age>10:
+   print "11"
+else:
+   print "2"
+
+sum = 0
+for x in range(5):
+    sum = sum + x
+print sum
+
+b=int(raw_input("enter a num:"))
+
+print b
+print "ok"
+if b>10:
+  print "true"
+else:
+  print "false"  
