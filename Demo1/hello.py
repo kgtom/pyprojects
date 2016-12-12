@@ -30,16 +30,7 @@ print counter
 print str[0]
 print str+"test"
 
-list=["tom",123,3.34,]
-tinyList=[1234,'john']
 
-print list
-print list[0]
-print tinyList*2
-print list +tinyList
-
-for ele in list:
- print (ele)
 
  name1=raw_input()
  
