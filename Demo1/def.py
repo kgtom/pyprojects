@@ -29,3 +29,9 @@ print [d for d in os.listdir('.')]
 
 aa="abc"
 print isinstance(aa,str)
+
+# 生成器
+g = (x * x for x in range(10))
+print g
+for n in g:
+   print n
