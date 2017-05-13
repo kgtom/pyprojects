@@ -1,0 +1,141 @@
+
+
+1.安装python2.7，记得把add-path的勾打上，如果忘记也没有关系，去系统环境变量，“Path”下增加“C:\Python\Python27\”和“C:\Python\Python27\Scripts”。我按我的安装路径讲下去
+
+2.安装Python插件,Ctrl+Shift+X进入插件列表，搜索python，安装Don Jayamanne。
+
+3.配置Python的版本，一般linux的是在"/usr/bin.python"路径下，自己windows配置如下取决于你的安装路径。  依次点击“文件->首选项->用户设置”，出现"default.setting" 和"setting.json"。当setting.json设置了与默认设置相同的内容则覆盖。接下来复制出"python.pythonPath": "python"到setting，修改路径，“C:/Python/Python27/python”记住我后面加粗的python一定要加。现在按F5，选择python，会出现一个launch.json，默认保存就行，pythonpath会从setting.json取。再按F5，应该可以调试了。      创建一个py，按ctrl+shift+b运行，选择最后一个others，会自动生成一个task.json,改成下面这样。
+
+{
+
+"version": "0.1.0",
+
+"command": "C:/Python27/python",
+
+"isShellCommand": true,
+
+"args": ["${file}"],
+
+"showOutput": "always"
+
+}
+ctrl+shift+B可以运行程序了。
+
+特别注意：python 这个必须要
+
+4.关于环境变量。第二步添加了环境变量，其实添加了环境变量之后，后面setting.json的path使用默认便可，task.json的“command”路径可直接设为“python”。task.json 
+  配置如下：
+  
+  {
+   
+    "version": "0.1.0",
+    "command": "python",
+    "isShellCommand": true,
+    "args": ["${file}"],
+    "showOutput": "always"
+}
+5.launch.json 配置如下： 主要"pythonPath": "C:\\Python27\\python.exe",
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": true,
+            "pythonPath": "C:\\Python27\\python.exe",
+            "program": "${file}",
+            "debugOptions": [
+                "WaitOnAbnormalExit",
+                "WaitOnNormalExit",
+                "RedirectOutput"
+            ]
+        },
+        {
+            "name": "Integrated Terminal/Console",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": true,
+            "pythonPath": "C:\\Python27\\python.exe",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "debugOptions": [
+                "WaitOnAbnormalExit",
+                "WaitOnNormalExit"
+            ]
+        },
+        {
+            "name": "External Terminal/Console",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": true,
+            "pythonPath": "C:\\Python27\\python.exe",
+            "program": "${file}",
+            "console": "externalTerminal",
+            "debugOptions": [
+                "WaitOnAbnormalExit",
+                "WaitOnNormalExit"
+            ]
+        },
+        {
+            "name": "Django",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": true,
+           "pythonPath": "C:\\Python27\\python.exe",
+            "program": "${workspaceRoot}/manage.py",
+            "args": [
+                "runserver",
+                "--noreload"
+            ],
+            "debugOptions": [
+                "WaitOnAbnormalExit",
+                "WaitOnNormalExit",
+                "RedirectOutput",
+                "DjangoDebugging"
+            ]
+        },
+        {
+            "name": "Flask",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": true,
+            "pythonPath": "C:\\Python27\\python.exe",
+            "program": "${workspaceRoot}/run.py",
+            "args": [],
+            "debugOptions": [
+                "WaitOnAbnormalExit",
+                "WaitOnNormalExit",
+                "RedirectOutput"
+            ]
+        },
+        {
+            "name": "Watson",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": true,
+           "pythonPath": "C:\\Python27\\python.exe",
+            "program": "${workspaceRoot}/console.py",
+            "args": [
+                "dev",
+                "runserver",
+                "--noreload=True"
+            ],
+            "debugOptions": [
+                "WaitOnAbnormalExit",
+                "WaitOnNormalExit",
+                "RedirectOutput"
+            ]
+        },
+        {
+            "name": "Attach (Remote Debug)",
+            "type": "python",
+            "request": "attach",
+            "localRoot": "${workspaceRoot}",
+            "remoteRoot": "${workspaceRoot}",
+            "port": 3000,
+            "secret": "my_secret",
+            "host": "localhost"
+        }
+    ]
+}
