@@ -1,4 +1,4 @@
-tip:
+tip: http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/0013868200385680e8cf932dba9433ea367de9aba2b4784000
  面向对象的设计思想是从自然界中来的，因为在自然界中，类（Class）和实例（Instance）的概念是很自然的。Class是一种抽象概念，
  比如我们定义的Class——Student，是指学生这个概念，而实例（Instance）则是一个个具体的Student，
  比如，Bart Simpson和Lisa Simpson是两个具体的Student：
