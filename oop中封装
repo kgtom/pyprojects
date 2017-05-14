@@ -1,0 +1,32 @@
+
+来源：http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/001386820044406b227b3e751cc4d5190420d17a2dc6353000
+
+code:
+
+class Student(object):
+
+    def __init__(self, name, score):
+        self.__name = name
+        self.__score = score
+
+    def print_score(self):
+        print '%s: %s' % (self.__name, self.__score)
+    def get_name(self):
+        return self.__name
+    def get_score(self):
+        return self.__score
+    def set_score(self, score):
+        self.__score = score
+bart = Student('Bart Simpson', 59)
+#lisa = Student('Lisa Simpson', 12)
+#bart.print_score()
+ #lisa.print_score()
+ #get private attr
+print Student.get_name(bart)
+print Student.get_score(bart)
+//reset 
+Student.set_score(bart,100)
+print Student.get_score(bart)
+// user defind attr
+# bart.age=8
+#print.Student.get_name(lisa)
