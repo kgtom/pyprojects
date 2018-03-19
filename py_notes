@@ -26,7 +26,8 @@
 14.模块：拿过来就用，不用自己写。
 15. __all__:将私有变量封装起来，外部可以访问；等同于 模块名称.__private_variate
 16. __init__.py的第一个作用就是package的标识，如果没有该文件，该目录就不会认为是package。
-  另外一个作用就是定义package中的__all__，用来模糊导入
+  另外一个作用就是定义package中的__all__，用来模糊导入;
+  ps：不建议在__init__中写python模块，可以在包中在创建另外的模块来写，尽量保证__init__.py简单
 17.
 
 
@@ -34,5 +35,6 @@
 
 reference:
 http://blog.konghy.cn/2017/04/24/python-entry-program/
+https://www.cnblogs.com/AlwinXu/p/5598543.html
 
 
