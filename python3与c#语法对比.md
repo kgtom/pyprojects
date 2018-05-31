@@ -3,15 +3,6 @@
 
 ---
 
-<ul>
-<li><a href="http://www.cnblogs.com/">博客园</a></li>
-<li><a href="http://www.cnblogs.com/dotnetcrazy/">首页</a></li>
-<li><a href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
-<li><a href="https://msg.cnblogs.com/send/%E9%B2%B2%E9%80%B8%E9%B9%8F">联系</a></li>
-<li><a href="http://www.cnblogs.com/dotnetcrazy/rss">订阅</a></li>
-<li><a href="https://i.cnblogs.com/">管理</a></li>
-</ul>
-<p>随笔 - 17 文章 - 0 评论 - 30</p>
 <h1 id="python3-与-c-基础语法对比（就当python和c基础的普及吧）"><a href="https://www.cnblogs.com/dotnetcrazy/p/9102030.html">Python3 与 C# 基础语法对比（就当Python和C#基础的普及吧）</a></h1>
 <p>VSCode设置python3的开发环境（linux下默认是python2）<a href="https://www.cnblogs.com/dotnetcrazy/p/9095793.html">https://www.cnblogs.com/dotnetcrazy/p/9095793.html</a></p>
 <p><strong>欢迎提出更简单的语法~（文章中案例有两个福利哦，一个是养生，一个是人工智能[ 密码：fqif]）</strong></p>
